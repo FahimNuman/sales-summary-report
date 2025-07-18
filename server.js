@@ -39,7 +39,7 @@ const app = express();
 
 // CORS configuration
 app.use(cors({
-  origin: ["https://your-app.vercel.app", "http://localhost:3000", "http://localhost:3001"], // Replace with your Vercel domain
+  origin: ["https://sales-summary-report-frontend.vercel.app", "http://localhost:3000", "http://localhost:3001"],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
