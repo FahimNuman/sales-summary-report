@@ -39,7 +39,7 @@ const app = express();
 
 // CORS configuration
 app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:3001"],
+  origin: ["https://your-app.vercel.app", "http://localhost:3000", "http://localhost:3001"], // Replace with your Vercel domain
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
@@ -48,6 +48,22 @@ app.use(cors({
 // Body parsing middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Root route
+app.get("/", (req, res) => {
+  res.status(200).json({
+    message: "Welcome to the Sales Summary Report API",
+    status: "OK",
+    endpoints: {
+      health: "/api/health",
+      sheets: "/api/sheets",
+      items: "/api/items",
+      competitors: "/api/competitors",
+      colors: "/api/colors",
+      upload: "/api/upload",
+    },
+  });
+});
 
 // API Routes
 app.use("/api/sheets", sheetRoutes);
