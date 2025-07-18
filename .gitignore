@@ -26,4 +26,4 @@
 # uploads
 
 node_modules
-.vercel
+#.vercel
