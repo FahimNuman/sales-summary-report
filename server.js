@@ -40,12 +40,14 @@ const app = express();
 // CORS configuration
 app.use(cors({
   origin: [
-    "https://sales-summary-report-front.vercel.app",
-    "https://sales-summary-report-front-git-main-fahimnumans-projects.vercel.app",
-    "https://sales-summary-report-front-b8myrpyap-fahimnumans-projects.vercel.app",
-    "http://localhost:3000",
-    "http://localhost:3001"
-  ],
+  "https://sales-summary-report-front.vercel.app",
+  "https://sales-summary-report-front-git-main-fahimnumans-projects.vercel.app",
+  "https://sales-summary-report-front-b8myrpyap-fahimnumans-projects.vercel.app",
+  "https://sales-summery-front.netlify.app",
+  "http://localhost:3000",
+  "http://localhost:3001",
+  "https://sales-summary-report.vercel.app" // ADD THIS
+],
   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
   credentials: true,
